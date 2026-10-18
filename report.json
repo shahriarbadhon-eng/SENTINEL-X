@@ -1,0 +1,222 @@
+[
+    {
+        "event_id": 1,
+        "event_type": "repeated_failed_logins",
+        "description": "Thirty failed password attempts against one account within two minutes",
+        "source_ip": "192.168.1.50",
+        "attempts": 30,
+        "technique_id": "T1110",
+        "technique_name": "Brute Force",
+        "reason": "Repeated login failures may indicate password guessing.",
+        "next_step": "Check timestamps, targeted accounts, source IP, and successful logins."
+    },
+    {
+        "event_id": 2,
+        "event_type": "suspicious_shell_execution",
+        "description": "An unusual shell command was executed by a user account",
+        "source_ip": "192.168.1.75",
+        "attempts": 1,
+        "technique_id": "T1059.004",
+        "technique_name": "Unix Shell",
+        "reason": "Unusual shell execution may require investigation.",
+        "next_step": "Review the command, user, parent process, and execution context."
+    },
+    {
+        "event_id": 3,
+        "event_type": "suspicious_powershell",
+        "description": "PowerShell executed an encoded command that requires investigation",
+        "source_ip": "192.168.1.80",
+        "attempts": 1,
+        "technique_id": "T1059.001",
+        "technique_name": "PowerShell",
+        "reason": "Unusual PowerShell activity may indicate suspicious execution.",
+        "next_step": "Review command-line details and the process that launched it."
+    },
+    {
+        "event_id": 4,
+        "event_type": "scheduled_task_created",
+        "description": "An unexpected scheduled task appeared on a workstation",
+        "source_ip": "192.168.1.90",
+        "attempts": 1,
+        "technique_id": "T1053",
+        "technique_name": "Scheduled Task/Job",
+        "reason": "Unexpected task creation may be used to execute code later.",
+        "next_step": "Inspect the task, creator account, configured command, and timing."
+    },
+    {
+        "event_id": 5,
+        "event_type": "new_startup_entry",
+        "description": "An unfamiliar program was added to a startup location",
+        "source_ip": "192.168.1.91",
+        "attempts": 1,
+        "technique_id": "T1547",
+        "technique_name": "Boot or Logon Autostart Execution",
+        "reason": "An unfamiliar startup entry may run a program automatically.",
+        "next_step": "Inspect the entry, target file, creator, and file reputation."
+    },
+    {
+        "event_id": 6,
+        "event_type": "suspicious_process_injection",
+        "description": "An endpoint alert reported behavior consistent with process injection",
+        "source_ip": "192.168.1.92",
+        "attempts": 1,
+        "technique_id": "T1055",
+        "technique_name": "Process Injection",
+        "reason": "An endpoint alert reported behavior consistent with process injection.",
+        "next_step": "Review endpoint telemetry and investigate the affected process."
+    },
+    {
+        "event_id": 7,
+        "event_type": "unexpected_admin_account",
+        "description": "An unfamiliar account was added to a privileged group",
+        "source_ip": "192.168.1.93",
+        "attempts": 1,
+        "technique_id": "T1098",
+        "technique_name": "Account Manipulation",
+        "reason": "An unexpected privileged-group change may alter account access.",
+        "next_step": "Verify the account, group change, creator, and authorization."
+    },
+    {
+        "event_id": 8,
+        "event_type": "security_tool_disabled",
+        "description": "Endpoint security protection was unexpectedly disabled",
+        "source_ip": "192.168.1.94",
+        "attempts": 1,
+        "technique_id": "T1562.001",
+        "technique_name": "Impair Defenses: Disable or Modify Tools",
+        "reason": "Unexpectedly disabling security protection may reduce visibility.",
+        "next_step": "Check who disabled it, when, and whether maintenance was approved."
+    },
+    {
+        "event_id": 9,
+        "event_type": "suspicious_dns_queries",
+        "description": "A workstation generated repeated DNS requests to a suspicious-looking domain",
+        "source_ip": "192.168.1.95",
+        "attempts": 45,
+        "technique_id": "T1071.004",
+        "technique_name": "Application Layer Protocol: DNS",
+        "reason": "Unusual DNS requests may warrant command-and-control investigation.",
+        "next_step": "Review queried domains, DNS answers, frequency, and destination traffic."
+    },
+    {
+        "event_id": 10,
+        "event_type": "unusual_outbound_transfer",
+        "description": "A workstation sent an unusually large amount of data to an external destination",
+        "source_ip": "192.168.1.96",
+        "attempts": 1,
+        "technique_id": null,
+        "technique_name": "Manual review required",
+        "reason": "A large outbound transfer alone does not prove data theft.",
+        "next_step": "Check destination, data type, volume, and business justification."
+    },
+    {
+        "event_id": 11,
+        "event_type": "suspicious_archive_creation",
+        "description": "A large archive containing many sensitive-looking files was created unexpectedly",
+        "source_ip": "192.168.1.97",
+        "attempts": 1,
+        "technique_id": "T1560",
+        "technique_name": "Archive Collected Data",
+        "reason": "Unexpected archiving of files may relate to data staging.",
+        "next_step": "Inspect the archive, its contents, creator, and subsequent activity."
+    },
+    {
+        "event_id": 12,
+        "event_type": "new_service_installed",
+        "description": "An unfamiliar system service was installed on a workstation",
+        "source_ip": "192.168.1.98",
+        "attempts": 1,
+        "technique_id": "T1543",
+        "technique_name": "Create or Modify System Process",
+        "reason": "An unfamiliar service may be used to run a program persistently.",
+        "next_step": "Inspect service configuration, executable, creator, and timing."
+    },
+    {
+        "event_id": 13,
+        "event_type": "suspicious_remote_login",
+        "description": "A remote login occurred at an unusual time from an unfamiliar address",
+        "source_ip": "203.0.113.25",
+        "attempts": 1,
+        "technique_id": "T1021",
+        "technique_name": "Remote Services",
+        "reason": "An unusual remote login may warrant investigation.",
+        "next_step": "Verify the user, source IP, authentication method, and expected schedule."
+    },
+    {
+        "event_id": 14,
+        "event_type": "phishing_email_reported",
+        "description": "An employee reported an email containing a suspicious attachment",
+        "source_ip": "192.168.1.99",
+        "attempts": 1,
+        "technique_id": "T1566",
+        "technique_name": "Phishing",
+        "reason": "A suspicious email may be an attempt to gain access through deception.",
+        "next_step": "Examine sender details, links, attachments, and recipient exposure."
+    },
+    {
+        "event_id": 15,
+        "event_type": "suspicious_file_download",
+        "description": "A workstation downloaded an executable from an untrusted-looking domain",
+        "source_ip": "192.168.1.100",
+        "attempts": 1,
+        "technique_id": "T1105",
+        "technique_name": "Ingress Tool Transfer",
+        "reason": "An unexpected executable download may involve tool transfer.",
+        "next_step": "Check the URL, file hash, download process, and file reputation."
+    },
+    {
+        "event_id": 16,
+        "event_type": "file_integrity_change",
+        "description": "A monitored configuration file changed unexpectedly",
+        "source_ip": "192.168.1.101",
+        "attempts": 1,
+        "technique_id": null,
+        "technique_name": "Manual review required",
+        "reason": "A file change alone does not identify an attacker technique.",
+        "next_step": "Compare file hashes and review the change, user, and file history."
+    },
+    {
+        "event_id": 17,
+        "event_type": "multiple_account_failures",
+        "description": "Failed login attempts targeted twelve different accounts from one source",
+        "source_ip": "192.168.1.102",
+        "attempts": 12,
+        "technique_id": "T1110.003",
+        "technique_name": "Password Spraying (candidate)",
+        "reason": "Failures across many accounts may warrant investigation for spraying.",
+        "next_step": "Compare targeted accounts, timing, source IP, and password patterns."
+    },
+    {
+        "event_id": 18,
+        "event_type": "unusual_privilege_use",
+        "description": "A standard user process unexpectedly attempted a privileged operation",
+        "source_ip": "192.168.1.103",
+        "attempts": 1,
+        "technique_id": null,
+        "technique_name": "Manual review required",
+        "reason": "An unusual privileged operation alone does not prove an attack.",
+        "next_step": "Review process details, permissions, outcome, and related alerts."
+    },
+    {
+        "event_id": 19,
+        "event_type": "possible_log_clearing",
+        "description": "An audit log was unexpectedly cleared or truncated",
+        "source_ip": "192.168.1.104",
+        "attempts": 1,
+        "technique_id": "T1070",
+        "technique_name": "Indicator Removal",
+        "reason": "Unexpected log clearing may indicate an attempt to remove evidence.",
+        "next_step": "Check audit records, authorized maintenance, and logging gaps."
+    },
+    {
+        "event_id": 20,
+        "event_type": "suspicious_remote_service",
+        "description": "An unexpected remote service connection was observed between two workstations",
+        "source_ip": "192.168.1.105",
+        "attempts": 1,
+        "technique_id": "T1021",
+        "technique_name": "Remote Services",
+        "reason": "Unexpected connections between workstations may require investigation.",
+        "next_step": "Identify the service, source and destination hosts, and authentication."
+    }
+]

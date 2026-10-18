@@ -1,0 +1,142 @@
+[
+    {
+        "event_id": 1,
+        "event_type": "repeated_failed_logins",
+        "description": "Thirty failed password attempts against one account within two minutes",
+        "source_ip": "192.168.1.50",
+        "attempts": 30
+    },
+    {
+        "event_id": 2,
+        "event_type": "suspicious_shell_execution",
+        "description": "An unusual shell command was executed by a user account",
+        "source_ip": "192.168.1.75",
+        "attempts": 1
+    },
+    {
+        "event_id": 3,
+        "event_type": "suspicious_powershell",
+        "description": "PowerShell executed an encoded command that requires investigation",
+        "source_ip": "192.168.1.80",
+        "attempts": 1
+    },
+    {
+        "event_id": 4,
+        "event_type": "scheduled_task_created",
+        "description": "An unexpected scheduled task appeared on a workstation",
+        "source_ip": "192.168.1.90",
+        "attempts": 1
+    },
+    {
+        "event_id": 5,
+        "event_type": "new_startup_entry",
+        "description": "An unfamiliar program was added to a startup location",
+        "source_ip": "192.168.1.91",
+        "attempts": 1
+    },
+    {
+        "event_id": 6,
+        "event_type": "suspicious_process_injection",
+        "description": "An endpoint alert reported behavior consistent with process injection",
+        "source_ip": "192.168.1.92",
+        "attempts": 1
+    },
+    {
+        "event_id": 7,
+        "event_type": "unexpected_admin_account",
+        "description": "An unfamiliar account was added to a privileged group",
+        "source_ip": "192.168.1.93",
+        "attempts": 1
+    },
+    {
+        "event_id": 8,
+        "event_type": "security_tool_disabled",
+        "description": "Endpoint security protection was unexpectedly disabled",
+        "source_ip": "192.168.1.94",
+        "attempts": 1
+    },
+    {
+        "event_id": 9,
+        "event_type": "suspicious_dns_queries",
+        "description": "A workstation generated repeated DNS requests to a suspicious-looking domain",
+        "source_ip": "192.168.1.95",
+        "attempts": 45
+    },
+    {
+        "event_id": 10,
+        "event_type": "unusual_outbound_transfer",
+        "description": "A workstation sent an unusually large amount of data to an external destination",
+        "source_ip": "192.168.1.96",
+        "attempts": 1
+    },
+    {
+        "event_id": 11,
+        "event_type": "suspicious_archive_creation",
+        "description": "A large archive containing many sensitive-looking files was created unexpectedly",
+        "source_ip": "192.168.1.97",
+        "attempts": 1
+    },
+    {
+        "event_id": 12,
+        "event_type": "new_service_installed",
+        "description": "An unfamiliar system service was installed on a workstation",
+        "source_ip": "192.168.1.98",
+        "attempts": 1
+    },
+    {
+        "event_id": 13,
+        "event_type": "suspicious_remote_login",
+        "description": "A remote login occurred at an unusual time from an unfamiliar address",
+        "source_ip": "203.0.113.25",
+        "attempts": 1
+    },
+    {
+        "event_id": 14,
+        "event_type": "phishing_email_reported",
+        "description": "An employee reported an email containing a suspicious attachment",
+        "source_ip": "192.168.1.99",
+        "attempts": 1
+    },
+    {
+        "event_id": 15,
+        "event_type": "suspicious_file_download",
+        "description": "A workstation downloaded an executable from an untrusted-looking domain",
+        "source_ip": "192.168.1.100",
+        "attempts": 1
+    },
+    {
+        "event_id": 16,
+        "event_type": "file_integrity_change",
+        "description": "A monitored configuration file changed unexpectedly",
+        "source_ip": "192.168.1.101",
+        "attempts": 1
+    },
+    {
+        "event_id": 17,
+        "event_type": "multiple_account_failures",
+        "description": "Failed login attempts targeted twelve different accounts from one source",
+        "source_ip": "192.168.1.102",
+        "attempts": 12
+    },
+    {
+        "event_id": 18,
+        "event_type": "unusual_privilege_use",
+        "description": "A standard user process unexpectedly attempted a privileged operation",
+        "source_ip": "192.168.1.103",
+        "attempts": 1
+    },
+    {
+        "event_id": 19,
+        "event_type": "possible_log_clearing",
+        "description": "An audit log was unexpectedly cleared or truncated",
+        "source_ip": "192.168.1.104",
+        "attempts": 1
+    },
+    {
+        "event_id": 20,
+        "event_type": "suspicious_remote_service",
+        "description": "An unexpected remote service connection was observed between two workstations",
+        "source_ip": "192.168.1.105",
+        "attempts": 1
+    }
+]
